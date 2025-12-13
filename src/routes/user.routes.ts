@@ -4,8 +4,6 @@ import { auth } from "../middleware/auth.js";
 
 const router = Router();
 
-// DELETE /api/users/:userId
-
 router.put("/update", auth, userController.updateUser);
 router.delete("/delete", auth, userController.deleteUser);
 

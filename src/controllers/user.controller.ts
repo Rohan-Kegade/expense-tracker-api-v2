@@ -5,7 +5,7 @@ export default {
   updateUser: async (req: Request, res: Response) => {
     try {
       const { name, email } = req.body;
-      const userId = req.user.id; // assuming you have auth middleware
+      const userId = req.user.id;
 
       const updatedUser = await userService.updateUser(userId, { name, email });
 

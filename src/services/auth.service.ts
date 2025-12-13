@@ -9,7 +9,7 @@ export default {
     name: string,
     email: string,
     password: string,
-    defaultCategories: string[]
+    defaultCategories: string[],
   ) {
     // 1. Create user
     const hashedPassword = await bcrypt.hash(password, 10);

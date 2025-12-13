@@ -13,7 +13,7 @@ export default {
     const category = await categoryService.createCategory(
       req.user.id,
       name,
-      budget
+      budget,
     );
     res.json(category);
   },

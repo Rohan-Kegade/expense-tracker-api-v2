@@ -13,7 +13,7 @@ export default {
     const result = await budgetService.createOrUpdateBudget(
       req.user.id,
       category,
-      budget
+      budget,
     );
     res.json(result);
   },

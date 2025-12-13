@@ -31,7 +31,7 @@ export default {
     const updated = await expenseService.updateExpense(
       expenseId,
       userId,
-      req.body
+      req.body,
     );
 
     res.json(updated);

@@ -3,7 +3,7 @@ import User from "../models/user.model.js";
 export default {
   updateUser: async (
     userId: string,
-    data: { name?: string; email?: string }
+    data: { name?: string; email?: string },
   ) => {
     // Check if user is trying to change email to one already in use
     if (data.email) {
@@ -16,7 +16,7 @@ export default {
     const updatedUser = await User.findByIdAndUpdate(
       userId,
       { $set: data },
-      { new: true }
+      { new: true },
     ).select("-password"); // don't send password
 
     if (!updatedUser) {

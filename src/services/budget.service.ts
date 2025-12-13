@@ -5,7 +5,11 @@ export default {
     return Budget.find({ userId });
   },
 
-  createOrUpdateBudget: async (userId: string, category: string, budget: number) => {
+  createOrUpdateBudget: async (
+    userId: string,
+    category: string,
+    budget: number,
+  ) => {
     let item = await Budget.findOne({ userId, category });
 
     if (item) {

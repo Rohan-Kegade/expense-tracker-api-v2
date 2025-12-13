@@ -23,7 +23,7 @@ export default {
 
     if (expenseExists) {
       throw new Error(
-        `Cannot delete category "${name}" because it is used in existing expenses.`
+        `Cannot delete category "${name}" because it is used in existing expenses.`,
       );
     }
     await Category.deleteOne({ userId, name });
